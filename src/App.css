@@ -1,0 +1,6 @@
+/* Gap Between Sections */
+.section-gap {
+  margin-top: 50px; /* Adjust the space between banner and image card */
+  display: flex;
+  justify-content: center;
+}

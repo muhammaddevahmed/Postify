@@ -1,0 +1,84 @@
+/* Footer Container */
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    margin-top: 5%;
+}
+
+/* Logo & Brand Name */
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px; /* Increased gap below logo */
+}
+
+.logo {
+    height: 50px;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Increased spacing between links */
+    margin-bottom: 50px; /* Added margin below links */
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased spacing between icons */
+    margin-top: 30px; /* Added margin on top */
+    margin-bottom: 50px; /* Added margin below icons */
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background-color: #373751; /* Light Purple */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Blue Horizontal Line */
+.footer-line {
+    border: none;
+    height: 3px;
+    background-color: blue;
+    width: 90%;
+    margin: 40px auto; /* Increased spacing above and below */
+}
+
+/* Copyright Text */
+.copyright {
+    font-size: 1rem;
+    color: gray;
+    margin-top: 20px; /* Added margin above copyright text */
+}
