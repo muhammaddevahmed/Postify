@@ -1,10 +1,12 @@
-/* Footer Container */
+/* Updated Footer Styles */
 .footer {
     background-color: white;
     text-align: center;
     padding: 40px;
     width: 100%;
     margin-top: 5%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
 }
 
 /* Logo & Brand Name */
@@ -13,16 +15,17 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-bottom: 40px; /* Increased gap below logo */
+    margin-bottom: 40px;
 }
 
 .logo {
-    height: 50px;
+    height: 55px; /* Slightly bigger */
 }
 
 .brand-name {
-    font-size: 1.8rem;
+    font-size: 2rem; /* Increased size */
     font-weight: bold;
+    color: #333; /* Darker shade */
 }
 
 /* Navigation Links */
@@ -31,8 +34,8 @@
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 50px; /* Increased spacing between links */
-    margin-bottom: 50px; /* Added margin below links */
+    gap: 50px;
+    margin-bottom: 50px;
 }
 
 .footer-links li {
@@ -43,21 +46,45 @@
     text-decoration: none;
     color: black;
     font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Links */
+.footer-links a:hover {
+    color: blue;
+}
+
+/* Underline Effect on Hover */
+.footer-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: width 0.3s ease-in-out;
+    margin-top: 3px;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
 }
 
 /* Social Media Icons */
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Increased spacing between icons */
-    margin-top: 30px; /* Added margin on top */
-    margin-bottom: 50px; /* Added margin below icons */
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
+/* Stylish Social Icons */
 .icon {
     width: 45px;
     height: 45px;
-    background-color: #373751; /* Light Purple */
+    background: linear-gradient(135deg, #4B79A1, #283E51);
     color: white;
     display: flex;
     align-items: center;
@@ -65,20 +92,29 @@
     border-radius: 50%;
     font-weight: bold;
     font-size: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Social Icons Hover Effect */
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(75, 121, 161, 0.5);
 }
 
 /* Blue Horizontal Line */
 .footer-line {
     border: none;
-    height: 3px;
-    background-color: blue;
+    height: 2px;
+    background: linear-gradient(to right, transparent, blue, transparent);
     width: 90%;
-    margin: 40px auto; /* Increased spacing above and below */
+    margin: 40px auto;
+    box-shadow: 0px 0px 8px rgba(0, 0, 255, 0.3);
 }
 
 /* Copyright Text */
 .copyright {
     font-size: 1rem;
     color: gray;
-    margin-top: 20px; /* Added margin above copyright text */
+    margin-top: 20px;
+    opacity: 0.8;
 }

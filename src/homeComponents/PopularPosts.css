@@ -1,97 +1,144 @@
 /* Container */
 .popular-posts {
-    width: 80%;
-    margin: 60px auto;
-  }
-  
-  /* Header Section */
-  .popular-posts-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .popular-posts-header h2 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .view-all-btn {
-    background-color: purple;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .view-all-btn:hover {
-    background-color: darkviolet;
-  }
-  
-  /* Grid Layout for Cards */
+  width: 80%;
+  margin: 60px auto;
+}
+
+/* Header Section */
+.popular-posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.popular-posts-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* View All Button */
+.view-all-btn {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(128, 0, 128, 0.3);
+}
+
+.view-all-btn:hover {
+  background-color: darkviolet;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(128, 0, 128, 0.5);
+}
+
+/* Grid Layout for Cards */
+.popular-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* Individual Card */
+.popular-post-card {
+  text-align: left;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.popular-post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.popular-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.popular-post-card:hover .popular-image {
+  transform: scale(1.03);
+}
+
+/* Post Date */
+.post-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Post Title */
+.post-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  color: #222;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Post Description */
+.post-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Read More Link */
+.read-more1 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: blue;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+.read-more1:hover {
+  text-decoration: underline;
+  color: darkblue;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .popular-posts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  /* Individual Card */
-  .popular-post-card {
-    text-align: left;
-  }
-  
-  .popular-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .post-date {
-    font-size: 0.9rem;
-    color: gray;
-  }
-  
-  .post-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-  
-  .post-description {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-  
-  .read-more1 {
-    font-size: 1rem;
-    font-weight: bold;
-    color: blue;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .read-more1:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .popular-posts-grid {
       grid-template-columns: repeat(2, 1fr);
-    }
   }
-  
-  @media (max-width: 768px) {
-    .popular-posts-grid {
+}
+
+@media (max-width: 768px) {
+  .popular-posts-grid {
       grid-template-columns: repeat(1, 1fr);
-    }
   }
   
+  .popular-posts-header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .view-all-btn {
+      margin-top: 10px;
+  }
+}
