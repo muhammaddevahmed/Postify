@@ -2,6 +2,7 @@
 import "./Footer.css";
 import { Link } from 'react-router-dom';
 
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -13,18 +14,19 @@ const Footer = () => {
 
       {/* Navigation Links */}
       <ul className="footer-links">
-        <li><a href="#">Home</a></li>
-        <Link to="./Blog"><li>Blog</li></Link> 
-      <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <Link to='/'><li>Home</li></Link>
+        <Link to="./Blog"><li>Blog</li></Link>
+        <li><a href="#">About</a></li>
+        <Link to="./Contact"><li>Contact Us</li></Link>
       </ul>
 
       {/* Social Media Icons */}
       <div className="social-icons">
-        <span className="icon">FB</span>
-        <span className="icon">IG</span>
-        <span className="icon">LN</span>
-        <span className="icon">YT</span>
+        <Link to='./Error'><span className="icon">FB</span></Link>
+        <Link to='./Error'><span className="icon">IG</span></Link>
+        <Link to='./Error'><span className="icon">LN</span></Link>
+        <Link to='./Error'><span className="icon">YT</span></Link>
+        
       </div>
 
       {/* Blue Horizontal Line */}

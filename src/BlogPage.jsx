@@ -1,4 +1,5 @@
 import PopularPosts from "./assets/Components/homeComponents/PopularPosts";
+import SecondBanner from "./assets/Components/homeComponents/SecondBanner";
 import "./BlogPage.css";
 
 function BlogPage() {
@@ -57,6 +58,7 @@ function BlogPage() {
       </article>
     </div>
     <PopularPosts/>
+    <SecondBanner/>
     </div>
   );
 }
