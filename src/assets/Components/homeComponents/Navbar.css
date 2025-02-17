@@ -6,7 +6,7 @@
   background-color: white;
   padding: 15px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
@@ -115,7 +115,7 @@
 @media (max-width: 768px) {
   .navbar {
       flex-direction: column;
-      padding: 12px;
+      padding: 10px;
   }
 
   .navbar-left {

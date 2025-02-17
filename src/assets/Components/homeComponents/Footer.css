@@ -5,6 +5,8 @@
     padding: 40px;
     width: 100%;
     margin-top: 5%;
+    margin-left: auto;  /* Ensures it is centered horizontally */
+    margin-right: auto; /* Ensures it is centered horizontally */
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
     border-radius: 10px 10px 0 0; /* Rounded top corners */
 }
@@ -117,4 +119,81 @@
     color: gray;
     margin-top: 20px;
     opacity: 0.8;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+    
+    .footer-logo {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .brand-name {
+        font-size: 1.6rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .footer-line {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .brand-name {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    .footer-line {
+        width: 70%;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+    }
 }

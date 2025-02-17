@@ -1,5 +1,6 @@
 
 import "./Footer.css";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -13,8 +14,8 @@ const Footer = () => {
       {/* Navigation Links */}
       <ul className="footer-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">About</a></li>
+        <Link to="./Blog"><li>Blog</li></Link> 
+      <li><a href="#">About</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
 

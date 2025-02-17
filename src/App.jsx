@@ -1,33 +1,45 @@
 import { Routes, Route } from 'react-router-dom';
-import Blog from './pages/Blog';
-import Navbar from "./homeComponents/navbar";
-import Banner from "./homeComponents/Banner";
-import FeaturedCard from "./homeComponents/FeaturedCard";
-import RecentPosts from "./homeComponents/RecentPosts";
-import PopularPosts from "./homeComponents/PopularPosts";
-import SecondBanner from "./homeComponents/SecondBanner";
-import Footer from "./homeComponents/Footer";
-
-
-import "./App.css";
-
+import Blog from './Blog';
+import BlogPage from './BlogPage';
+import Navbar from "./assets/Components/homeComponents/navbar";
+import Banner from "./assets/Components/homeComponents/Banner";
+import FeaturedCard from "./assets/Components/homeComponents/FeaturedCard";
+import RecentPosts from "./assets/Components/homeComponents/RecentPosts";
+import PopularPosts from "./assets/Components/homeComponents/PopularPosts";
+import SecondBanner from "./assets/Components/homeComponents/SecondBanner";
+import Footer from "./assets/Components/homeComponents/Footer";
 
 function App() {
   return (
     <div>
+        <Navbar />
+      <Routes>
+    
+        {/* Correct path for Blog Page */}
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/BlogPage" element={<BlogPage />} />
+         
+        <Route 
+          path="/" 
+          element={
+            <>
+             
+              <Banner />
+              <div className="section-gap">
+                <FeaturedCard />
+              </div>
+              <RecentPosts />
+              <PopularPosts />
+             
+              
+            </>
+            
+          } 
+          
+        />
+        
        
-       <div>
-  <Navbar />
-  <Routes>
-    <Route path="/blog" element={<Blog />} />
-  </Routes>
-</div>
-      <Banner />
-      <div className="section-gap"> {/* This adds the gap */}
-        <FeaturedCard />
-      </div>
-      <RecentPosts />
-      <PopularPosts />
+      </Routes>
       <SecondBanner />
       <Footer />
     </div>
