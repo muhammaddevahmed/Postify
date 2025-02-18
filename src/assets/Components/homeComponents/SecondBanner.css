@@ -1,6 +1,6 @@
 /* Updated Banner Styles */
 .second-banner {
-  background: linear-gradient(to right, #0066ff, #003399);
+  background-color: #7C4EE4; /* Corrected syntax */
   color: white;
   width: 100%;
   min-height: 400px; /* Fallback */
@@ -14,6 +14,8 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   margin-top: 15%;
 }
+
+
 
 /* Updated Heading */
 .banner-heading {

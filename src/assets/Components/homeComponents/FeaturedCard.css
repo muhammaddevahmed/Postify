@@ -34,7 +34,7 @@
 }
 
 /* Overlapping Info Card */
-.info-card {
+.info-card12 {
   position: absolute;
   bottom: -1px;
   right: 20px;
@@ -50,7 +50,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.image-card:hover .info-card {
+.image-card:hover .info-card12 {
   transform: translateY(0);
   opacity: 1;
 }

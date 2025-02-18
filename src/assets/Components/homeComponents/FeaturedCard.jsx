@@ -7,11 +7,11 @@ const OverlappingCard = () => {
       <div className="image-card">
         {/* Replace with your image URL */}
         <img 
-          src="https://static.vecteezy.com/system/resources/thumbnails/023/030/611/small_2x/artificial-intelligence-ai-business-people-showing-future-technology-photo.jpg" 
+          src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2078&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
           alt="Development" 
           className="image" 
         />
-        <div className="info-card">
+        <div className="info-card12">
           <p className="date">Development • 16 March 2023</p>
           <h2 className="title">AI is Impact on the Future</h2>
           <p className="description">

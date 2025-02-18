@@ -8,24 +8,26 @@ const Footer = () => {
     <footer className="footer">
       {/* Logo & Brand Name */}
       <div className="footer-logo">
-        <img src="your-logo-url.png" alt="Logo" className="logo" />
-        <span className="brand-name">Your Brand</span>
+       <Link to='/' >
+       <img src="src/logo.png" alt="Logo" className="logo" />
+       </Link>
+        <span className="brand-name">ZARRIN</span>
       </div>
 
       {/* Navigation Links */}
       <ul className="footer-links">
         <Link to='/'><li>Home</li></Link>
-        <Link to="./Blog"><li>Blog</li></Link>
-        <li><a href="#">About</a></li>
-        <Link to="./Contact"><li>Contact Us</li></Link>
+        <Link to="./Pages/Blog"><li>Blog</li></Link>
+        <Link to="./Pages/About"><li>About Us</li></Link>
+        <Link to="./Pages/Contact"><li>Contact Us</li></Link>
       </ul>
 
       {/* Social Media Icons */}
       <div className="social-icons">
-        <Link to='./Error'><span className="icon">FB</span></Link>
-        <Link to='./Error'><span className="icon">IG</span></Link>
-        <Link to='./Error'><span className="icon">LN</span></Link>
-        <Link to='./Error'><span className="icon">YT</span></Link>
+        <Link to='./Pages/Error'><span className="icon">FB</span></Link>
+        <Link to='./Pages/Error'><span className="icon">IG</span></Link>
+        <Link to='./Pages/Error'><span className="icon">LN</span></Link>
+        <Link to='./Pages/Error'><span className="icon">YT</span></Link>
         
       </div>
 

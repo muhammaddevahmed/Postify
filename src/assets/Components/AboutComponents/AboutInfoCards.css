@@ -1,0 +1,92 @@
+/* Base styles for the card container */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows cards to wrap into a new line when necessary */
+  }
+  
+  /* Base styles for each card */
+  .card {
+    width: 24rem; /* Increased width */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%; /* Ensures the card takes up 30% of the width in desktop view */
+    margin-bottom: 20px; /* Adds some space below cards for mobile layout */
+    overflow: hidden; /* Ensures content doesn't overflow the card */
+  }
+  
+  /* Hover effect for the card */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: white; /* Light grey background on hover */
+  }
+  
+  /* Card body styles */
+  .card-body {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Card title styles */
+  .card-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: rgb(102, 95, 95);
+    font-weight: bold;
+  }
+  
+  /* Card subtitle styles */
+  .card-subtitle {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  /* Card text styles */
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #777;
+    line-height: 1.5;
+  }
+  
+  /* Card link styles */
+  .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Hover effect for the card link */
+  .card-link:hover {
+    color: white;
+    background-color: #007bff;
+    border-color: #0056b3;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column; /* Stack the cards vertically */
+      align-items: center; /* Center the cards */
+    }
+  
+    .card {
+      width: 100%; /* Make the card take full width */
+      margin-bottom: 20px; /* Add some space below each card */
+    }
+  }
+  

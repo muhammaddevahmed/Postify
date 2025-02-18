@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './Error.css'; // Create this CSS file
-import SecondBanner from './assets/Components/homeComponents/SecondBanner';
+import SecondBanner from '../assets/Components/homeComponents/SecondBanner';
 
 const Error = () => {
   const navigate = useNavigate();

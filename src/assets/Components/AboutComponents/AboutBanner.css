@@ -1,0 +1,12 @@
+/* BannerImage.css */
+.banner-container {
+    width: 90%;  
+    margin: 0 auto;  
+  }
+  
+  .banner-image {
+    width: 100%;  
+    height: auto;  
+    border-radius: 10px;  
+  }
+  

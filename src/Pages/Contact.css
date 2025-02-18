@@ -127,7 +127,7 @@
 }
 
 .submit-button {
-  background-color: #9333ea;
+  background-color: #7C4EE4;
   color: white;
   padding: 1rem 1.5rem;
   border: none;
@@ -139,7 +139,7 @@
 }
 
 .submit-button:hover {
-  background-color: #7e22ce;
+  background-color: #7C4EE4;
 }
 
 /* Responsive Design */
@@ -173,7 +173,7 @@
   padding: 10px 20px;
   font-size: 1.2rem;
   font-weight: bold;
-  background: #3498db;
+  background-color: #7C4EE4;
   color: white;
   border: none;
   border-radius: 5px;
@@ -199,7 +199,7 @@
 .submit-button {
   padding: 10px;
   font-size: 1.1rem;
-  background: #27ae60;
+  background-color: #7C4EE4;
   color: white;
   border: none;
   border-radius: 5px;

@@ -1,5 +1,5 @@
-import PopularPosts from "./assets/Components/homeComponents/PopularPosts";
-import SecondBanner from "./assets/Components/homeComponents/SecondBanner";
+import PopularPosts from "../assets/Components/homeComponents/PopularPosts";
+import SecondBanner from "../assets/Components/homeComponents/SecondBanner";
 import "./BlogPage.css";
 
 function BlogPage() {
@@ -17,7 +17,7 @@ function BlogPage() {
 
         {/* Main Image */}
         <div className="post-image wide-image">
-          <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg" 
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2078&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                alt="Web Development Concepts" />
         </div>
 
@@ -47,7 +47,7 @@ function BlogPage() {
 
         {/* Narrow Image */}
         <div className="post-image narrow-image">
-          <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg" 
+          <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                alt="Coding Process" />
         </div>
 

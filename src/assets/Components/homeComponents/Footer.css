@@ -28,6 +28,7 @@
     font-size: 2rem; /* Increased size */
     font-weight: bold;
     color: #333; /* Darker shade */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
 
 /* Navigation Links */
@@ -86,7 +87,7 @@
 .icon {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, #4B79A1, #283E51);
+    background-color: #7C4EE4;
     color: white;
     display: flex;
     align-items: center;

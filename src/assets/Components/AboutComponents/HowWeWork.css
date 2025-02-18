@@ -1,0 +1,64 @@
+/* HowWeWorkSection.css */
+.how-we-work-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    margin: 50px 0;           /* Add space above and below the section */
+    text-align: center;       /* Center all text */
+    gap: 30px;                 /* Add a 30px gap between items */
+  }
+  
+  .left-side,
+  .right-side {
+    flex: 1 1 45%;           /* Allow items to grow and shrink, with a base width of 45% */
+    padding: 0 20px;          /* Add padding to prevent text from touching the edges */
+  }
+  
+  .small-heading {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 10px;      /* Space between this and next element */
+  }
+  
+  .subheading {
+    font-size: 36px;
+    font-weight: bolder;
+    margin-bottom: 20px;      /* Space between this and next element */
+  }
+  
+  .large-heading {
+    font-size: 36px;
+    font-weight: bolder;
+    margin-bottom: 30px;      /* Space between this and next element */
+  }
+  
+  .right-heading {
+    font-size: 20px;
+    font-weight: lighter;
+    color: #555;  /* Slightly lighter text color */
+    line-height: 1.6;  /* Adjust line height for better readability */
+    margin-top: 20px;   /* Add space between this and the previous element */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .how-we-work-section {
+      flex-direction: column; /* Stack items vertically */
+      gap: 20px;               /* Reduce gap between items */
+    }
+  
+    .left-side,
+    .right-side {
+      flex: 1 1 100%;          /* Allow items to take full width */
+      padding: 0 10px;         /* Adjust padding for smaller screens */
+    }
+  
+    .small-heading,
+    .subheading,
+    .large-heading,
+    .right-heading {
+      font-size: 16px;         /* Adjust font size for smaller screens */
+    }
+  }
+  
