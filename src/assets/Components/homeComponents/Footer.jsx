@@ -9,7 +9,7 @@ const Footer = () => {
       {/* Logo & Brand Name */}
       <div className="footer-logo">
        <Link to='/' >
-       <img src="logo.png" alt="Logo" className="logo" />
+       <img src="/logo.png" alt="Logo" className="logo" />
        </Link>
         <span className="brand-name">ZARRIN</span>
       </div>
