@@ -11,6 +11,9 @@ import SecondBanner from "./assets/Components/homeComponents/SecondBanner";
 import Footer from "./assets/Components/homeComponents/Footer";
 import Error from './Pages/Error';
 import About from './Pages/About';
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
+import Profile from './Pages/Profile';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         <Route path="/Pages/About" element={<About />} />
         <Route path="/Pages/Contact" element={<Contact />} />
         <Route path="/Pages/Error" element={<Error />} />
+        <Route path="/Pages/Signup" element={<Signup />} />
+        <Route path="/Pages/Login" element={<Login />} />
+        <Route path="/Pages/Profile" element={<Profile />} />
          
         <Route 
           path="/" 
