@@ -1,5 +1,6 @@
 
 import "./PopularPosts.css";
+import { Link } from "react-router-dom";
 
 const PopularPosts = () => {
   const posts = [
@@ -52,7 +53,9 @@ const PopularPosts = () => {
       {/* Header Section */}
       <div className="popular-posts-header">
         <h2>Popular Post</h2>
-        <button className="view-all-btn">View All</button>
+        <Link to={`/Pages/Blog`}>
+  <button className="view-all-btn">View All</button>
+</Link>
       </div>
 
       {/* Post Cards */}

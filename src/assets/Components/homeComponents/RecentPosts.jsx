@@ -1,6 +1,7 @@
 
 import "./RecentPosts.css";
 import BlogCards from "../../../assets/Components/BlogComponents/BlogCards";
+import { Link } from "react-router-dom";
 
 const RecentPosts = () => {
   return (
@@ -8,7 +9,10 @@ const RecentPosts = () => {
       {/* Header Section */}
       <div className="recent-posts-header">
         <h2>Our Recent Post</h2>
-        <button className="view-all-btn">View All</button>
+        <Link to={`/Pages/Blog`}>
+  <button className="view-all-btn">View All</button>
+</Link>
+
       </div>
 
       {/* First Row: Large Post */}
