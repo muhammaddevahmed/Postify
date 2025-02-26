@@ -23,7 +23,7 @@ function App() {
     
         {/* Correct path for Blog Page */}
         <Route path="/Pages/Blog" element={<Blog />} />
-        <Route path="/Pages/BlogPage" element={<BlogPage />} />
+        <Route path="/Pages/BlogPage/:id" element={<BlogPage />} />
         <Route path="/Pages/About" element={<About />} />
         <Route path="/Pages/Contact" element={<Contact />} />
         <Route path="/Pages/Error" element={<Error />} />

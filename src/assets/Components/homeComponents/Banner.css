@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 5% 10%;
-  background-color: #7C4EE4;
+  background: linear-gradient(135deg, #7C4EE4, #5E35B1); /* Gradient background */
   color: white;
-  width: 99vw;
-  height: 85vh; /* Slightly taller for impact */
+  width: 100vw;
+  height: 90vh; /* Taller for more impact */
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
@@ -17,6 +17,7 @@
 .banner-text {
   max-width: 48%;
   animation: fadeInLeft 1s ease-in-out;
+  z-index: 2; /* Ensure text is above the image */
 }
 
 .featured {
@@ -25,62 +26,132 @@
   margin-bottom: 12px;
   color: #e0e0e0;
   letter-spacing: 1.5px;
+  font-weight: 600;
 }
 
 /* Title Styling */
 h1 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 4rem; /* Larger font size */
+  font-weight: 900; /* Bolder font */
   line-height: 1.2;
   letter-spacing: 1.5px;
   text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD700, #FF6F61); /* Gradient underline */
+  border-radius: 2px;
 }
 
 /* Highlighted Text */
 .highlight {
-  color: yellow;
-  text-shadow: 3px 3px 15px rgba(255, 255, 0, 0.8);
-  font-size: 1.7rem;
+  color: #FFD700; /* Gold color for highlight */
+  text-shadow: 3px 3px 15px rgba(255, 215, 0, 0.8);
+  font-size: 2rem; /* Larger font size */
+  font-weight: 700;
 }
 
 /* Description */
-.description {
-  font-size: 1.2rem;
+.description12 {
+  font-size: 1rem; /* Slightly larger font size */
   margin-right: 30%;
   color: #f5f5f5;
-  line-height: 1.6;
+  line-height: 1.8; /* Increased line height */
+  margin-bottom: 30px;
 }
 
 /* Read More Button */
 .read-more {
-  background-color: white;
-  color: purple;
+  background-color: #FF6F61; /* Vibrant button color */
+  color: white;
   border: none;
-  padding: 14px 28px;
+  padding: 16px 32px;
   font-size: 1.2rem;
-  border-radius: 10px;
+  border-radius: 25px; /* Rounded corners */
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 5px 12px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 12px rgba(255, 111, 97, 0.3);
   margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.read-more::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.read-more:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg);
 }
 
 .read-more:hover {
-  background-color: lightgray;
+  background-color: #FF4D4D; /* Darker hover color */
   transform: scale(1.08);
-  box-shadow: 0 7px 18px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 7px 18px rgba(255, 111, 97, 0.5);
 }
 
 /* Right Side - Image */
+.banner-image {
+  position: relative;
+  z-index: 1;
+}
+
 .banner-image img {
   width: 720px;
   height: 500px;
   object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   animation: fadeInRight 1s ease-in-out;
   margin-right: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-image img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Background Animation */
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10.01%);
+  background-size: 20px 20px;
+  animation: moveBackground 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 /* 📱 Responsive Design */
@@ -117,11 +188,11 @@ h1 {
 /* 📱 Mobile Design */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .highlight {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .description {

@@ -10,7 +10,7 @@ const Banner = () => {
         <h1>
           How <span className="highlight">AI will</span> <br /> Change the Future
         </h1>
-        <p className="description">
+        <p className="description12">
           Artificial Intelligence is transforming industries, automating tasks,
           and redefining the way humans interact with technology. As AI advances,
           it brings both opportunities and challenges for society.

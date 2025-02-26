@@ -73,6 +73,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin-bottom: 7%;
 }
 
 .contact-btn:hover {
@@ -88,6 +89,7 @@
   font-size: 1.8rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  color: black;
 }
 
 .toggle-btn:hover {
@@ -129,6 +131,7 @@
   font-size: 1.4rem;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  
 }
 
 .profile-icon:hover {
@@ -146,6 +149,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin-bottom: 7%;
 }
 
 .login-btn:hover {

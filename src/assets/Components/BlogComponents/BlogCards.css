@@ -1,20 +1,25 @@
 /* Page Title */
 .page-title {
     text-align: center;
-    font-size: 36px;
-    margin: 50px 0;
-    font-weight: bold;
-    color: #333;
+    font-size: 42px;
+    margin: 60px 0;
+    font-weight: 800;
+    color: #2c3e50;
     font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Container for Blog Cards */
 .blog-cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     padding: 20px;
     justify-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 5%;
 }
 
 /* Individual Blog Card */
@@ -24,25 +29,32 @@
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Ensure the card takes full width within the grid */
-    height: 650px; /* Increased height */
+    width: 100%;
+    height: 690px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    cursor: pointer;
 }
 
 /* Card Hover Effect */
 .blog-card:hover {
-    transform: translateY(-15px); /* More pronounced lift */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* Blog Card Image */
 .blog-card-image {
     width: 100%;
-    height: 350px; /* Increased height */
-    object-fit: cover; /* Ensures the image covers the space without distortion */
-    border-bottom: 2px solid #ddd;
+    height: 350px;
+    object-fit: cover;
     position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom effect on hover */
+.blog-card:hover .blog-card-image {
+    transform: scale(1.05);
 }
 
 /* Add a dark gradient overlay on the image */
@@ -54,32 +66,34 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Subtle border */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 /* Blog Card Content */
 .blog-card-content {
-    padding: 20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1; /* Ensures content takes available space */
+    flex-grow: 1;
+    background-color: #fff;
 }
 
 /* Small Heading */
 .small-heading {
-    font-size: 15px;
+    font-size: 14px;
     color: #999;
     margin-bottom: 8px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 /* Big Heading */
 .big-heading {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c3e50;
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.4;
@@ -87,7 +101,7 @@
 }
 
 .big-heading:hover {
-    color: #FF6F61; /* Hover color for big heading */
+    color: #FF6F61;
 }
 
 /* Description */
@@ -96,80 +110,161 @@
     color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
-    height: 80px; /* More height for text */
+    height: 80px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+/* Add a subtle fade effect to the description */
+.description::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
 /* Read More Link */
-.read-more {
-    font-size: 16px;
-    color: #FF6F61;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
+.read-more2 {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto; /* Ensure it can be clicked */
+}
+.blog-card::before {
+    pointer-events: none; /* Ensure the border overlay doesn't block clicks */
 }
 
+
 .read-more:hover {
+    color: #e65a50;
     text-decoration: underline;
 }
-/* Add responsive design adjustments */
+
+/* Add a subtle animation to the Read More link */
+.read-more2::after {
+    content: '→';
+    margin-left: 8px;
+    transition: margin-left 0.3s ease;
+}
+
+.read-more2:hover::after {
+    margin-left: 12px;
+}
+
+/* Add a subtle border to the card */
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(255, 111, 97, 0.3);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blog-card:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Design Adjustments */
 @media (max-width: 1024px) {
     .blog-cards-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .blog-card {
-        height: 500px; /* Adjusted height on medium screens */
-        overflow: hidden; /* Prevents overflow */
+        height: 500px;
     }
 
     .blog-card-image {
-        height: 230px; /* Adjusted height for image */
+        height: 230px;
     }
 
     .blog-card-content {
-        padding: 15px; /* Adjusted padding for better spacing */
+        padding: 15px;
     }
 
     .description {
-        font-size: 15px; /* Adjust description font size for readability */
+        font-size: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .blog-cards-container {
-        grid-template-columns: 1fr; /* 1 column on small screens */
+        grid-template-columns: 1fr;
     }
 
     .blog-card {
-        height: auto; /* Let height adjust automatically based on content */
-        margin-bottom: 20px; /* Added space between cards */
-        padding: 10px; /* Adjusted padding for smaller screens */
+        height: auto;
+        margin-bottom: 20px;
+        padding: 10px;
     }
 
     .blog-card-image {
-        height: 200px; /* Adjusted height for image on small screens */
-        object-fit: cover; /* Ensures image fits well */
+        height: 450px; /* Adjusted height for mobile */
+        width: 100%; /* Ensure full width */
+        object-fit: cover; /* Ensure image covers the area */
+        border-radius: 3%;
     }
 
     .page-title {
-        font-size: 28px; /* Smaller title font size on small screens */
-        margin: 20px 0; /* Added margin for spacing */
+        font-size: 32px;
+        margin: 20px 0;
     }
 
-    /* Ensure content doesn't overflow and fits properly on mobile */
     .description {
-        font-size: 14px; /* Slightly smaller font size on mobile */
-        height: auto; /* Let the description grow based on content */
-        overflow: visible; /* Allow text to show fully */
+        font-size: 14px;
+        height: auto; /* Allow description to expand */
+        overflow: visible; /* Show full description */
+        margin-bottom: 15px; /* Adjusted spacing */
     }
 
-    /* Adjust the Read More link for mobile */
+    .description::after {
+        display: none; /* Remove fade effect on mobile */
+    }
+
     .read-more {
         font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
     }
 }
+
+@media (max-width: 480px) {
+    .blog-card-image {
+        height: 200px; /* Smaller height for very small screens */
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+}
+
+.publ {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .publ:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  

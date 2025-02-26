@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
         <Link to="/Pages/Blog" onClick={() => setMenuOpen(false)}>Blog</Link>
         <Link to="/Pages/About" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="/Pages/Profile" className="profile-icon" onClick={() => setMenuOpen(false)}>🧑‍💼 Profile</Link>
+        <Link to="/Pages/Profile" className="profile-icon" onClick={() => setMenuOpen(false)}> Create Blog</Link>
         <span className="search-icon" onClick={() => setMenuOpen(false)}>🔍</span>
         <Link to="/Pages/Contact">
           <button className="contact-btn" onClick={() => setMenuOpen(false)}>Contact Us</button>
