@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import { auth, database } from "../Firebase/index";
 import { ref, get, push } from "firebase/database";

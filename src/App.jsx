@@ -15,6 +15,7 @@ import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Profile from './Pages/Profile';
 
+
 function App() {
   return (
     <div>
@@ -30,6 +31,7 @@ function App() {
         <Route path="/Pages/Signup" element={<Signup />} />
         <Route path="/Pages/Login" element={<Login />} />
         <Route path="/Pages/Profile" element={<Profile />} />
+    
          
         <Route 
           path="/" 
