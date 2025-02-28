@@ -1,12 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import Navbar from "../assets/Components/homeComponents/navbar";
 import './Error.css'; // Create this CSS file
 import SecondBanner from '../assets/Components/homeComponents/SecondBanner';
+import Footer from "../assets/Components/homeComponents/Footer";
 
 const Error = () => {
   const navigate = useNavigate();
 
   return (
     <div>
+      <Navbar />
     <div className="error-container">
       <div className="error-card">
         <h1 className="error-code">404</h1>
@@ -25,6 +28,7 @@ const Error = () => {
       </div>
     </div>
     <SecondBanner/>
+    <Footer />
     </div>
   );
 };

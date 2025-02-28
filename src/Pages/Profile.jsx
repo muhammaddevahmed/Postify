@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { auth, database } from "../Firebase/index";
 import { ref, get, push } from "firebase/database";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../assets/Components/homeComponents/navbar";
 import Swal from "sweetalert2";
 import "./Profile.css";
 
@@ -119,6 +120,8 @@ const Profile = () => {
   };
 
   return (
+    <div>
+    <Navbar />
     <div className="container">
       <aside className="sidebar">
         <h2>Profile Details</h2>
@@ -182,7 +185,7 @@ const Profile = () => {
             />
             <textarea
               name="longDescription"
-              placeholder="Long Description"
+              placeholder="Write your Blog content"
               value={blogData.longDescription}
               onChange={handleInputChange}
             />
@@ -200,6 +203,12 @@ const Profile = () => {
               value={blogData.otherImage}
               onChange={handleInputChange}
             />
+             <textarea
+              name="longDescription1"
+              placeholder="Write your more Blog content "
+              value={blogData.longDescription}
+              onChange={handleInputChange}
+            />
             <input
               type="text"
               name="publisher"
@@ -213,7 +222,9 @@ const Profile = () => {
         </div>
       )}
     </div>
+    </div>
   );
 };
 
 export default Profile;
+

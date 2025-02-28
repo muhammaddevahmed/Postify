@@ -19,7 +19,7 @@ import Profile from './Pages/Profile';
 function App() {
   return (
     <div>
-         <Navbar />
+       
       <Routes>
     
         {/* Correct path for Blog Page */}
@@ -37,7 +37,7 @@ function App() {
           path="/" 
           element={
             <>
-             
+                <Navbar />
               <Banner />
               <div className="section-gap">
                 <FeaturedCard />
@@ -45,6 +45,7 @@ function App() {
               <RecentPosts />
               <PopularPosts />
               <SecondBanner />
+              <Footer />
              
              
               
@@ -56,7 +57,7 @@ function App() {
         
        
       </Routes>
-      <Footer />
+    
       
     </div>
   );

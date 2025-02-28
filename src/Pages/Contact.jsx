@@ -1,5 +1,7 @@
 import { useState } from "react";
+import Navbar from "../assets/Components/homeComponents/navbar";
 import SecondBanner from "../assets/Components/homeComponents/SecondBanner";
+import Footer from "../assets/Components/homeComponents/Footer";
 import "./Contact.css";
 import { FaHome, FaEnvelope, FaPhone } from "react-icons/fa";
 
@@ -14,6 +16,7 @@ const Contact = () => {
 
   return (
     <div>
+      <Navbar />
       <div className="contact-container">
         {/* Heading */}
         <h1 className="contact-heading">Get in Touch</h1>
@@ -102,6 +105,7 @@ const Contact = () => {
         </div>
       </div>
       <SecondBanner/>
+      <Footer />
     </div>
   );
 };

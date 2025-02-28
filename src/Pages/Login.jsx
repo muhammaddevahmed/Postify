@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { auth, signInWithEmailAndPassword } from "../Firebase/index";
 import { useNavigate, Link } from "react-router-dom";
+import Navbar from "../assets/Components/homeComponents/navbar";
+import Footer from "../assets/Components/homeComponents/Footer";
 import Swal from "sweetalert2"; // Import SweetAlert
 import "./Login.css"; // Import CSS
 
@@ -35,6 +37,8 @@ const Login = () => {
   };
 
   return (
+    <div>
+     <Navbar /> 
     <div className="center">
       <div className="login-container">
         <h2>Login</h2>
@@ -57,8 +61,14 @@ const Login = () => {
           </p>
         </form>
       </div>
+     
     </div>
+    <Footer />
+    </div>
+  
   );
+
 };
+
 
 export default Login;

@@ -17,18 +17,18 @@ const Footer = () => {
       {/* Navigation Links */}
       <ul className="footer-links">
         <Link to='/'><li>Home</li></Link>
-        <Link to="./Pages/Blog"><li>Blog</li></Link>
-        <Link to="./Pages/About"><li>About Us</li></Link>
+        <Link to="/Pages/Blog"><li>Blog</li></Link>
+        <Link to="/Pages/About"><li>About Us</li></Link>
         <Link to="/Pages/Profile" className="profile-icon"> Create Blog</Link>
-        <Link to="./Pages/Contact"><li>Contact Us</li></Link>
+        <Link to="/Pages/Contact"><li>Contact Us</li></Link>
       </ul>
 
       {/* Social Media Icons */}
       <div className="social-icons">
-        <Link to='./Pages/Error'><span className="icon">FB</span></Link>
-        <Link to='./Pages/Error'><span className="icon">IG</span></Link>
-        <Link to='./Pages/Error'><span className="icon">LN</span></Link>
-        <Link to='./Pages/Error'><span className="icon">YT</span></Link>
+        <Link to='/Pages/Error'><span className="icon">FB</span></Link>
+        <Link to='/Pages/Error'><span className="icon">IG</span></Link>
+        <Link to='/Pages/Error'><span className="icon">LN</span></Link>
+        <Link to='/Pages/Error'><span className="icon">YT</span></Link>
         
       </div>
 

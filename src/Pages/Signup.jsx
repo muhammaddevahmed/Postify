@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { auth, database, createUserWithEmailAndPassword, ref, set } from "../Firebase/index";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "../assets/Components/homeComponents/navbar";
+import Footer from "../assets/Components/homeComponents/Footer";
 import Swal from "sweetalert2"; // Import SweetAlert
 import "./Signup.css"; // Import the updated CSS
 
@@ -71,6 +73,8 @@ const Signup = () => {
   };
 
   return (
+    <div>
+      <Navbar />
     <div className="center">
       <div className="signup-container1">
         <div className="signup-card">
@@ -97,6 +101,8 @@ const Signup = () => {
           </form>
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 };

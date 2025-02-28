@@ -1,13 +1,15 @@
-
-
+import Navbar from "../assets/Components/homeComponents/navbar";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { database, ref, get } from "../Firebase/index";
 import PopularPosts from "../assets/Components/homeComponents/PopularPosts";
 import SecondBanner from "../assets/Components/homeComponents/SecondBanner";
+import Footer from "../assets/Components/homeComponents/Footer";
+
 import "./BlogPage.css";
 
 function BlogPage() {
+  
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
@@ -25,6 +27,8 @@ function BlogPage() {
   }
 
   return (
+    <div>
+    <Navbar />
     <div>
       <div className="blog-container">
         <article className="blog-post">
@@ -53,6 +57,8 @@ function BlogPage() {
       </div>
       <PopularPosts />
       <SecondBanner />
+      <Footer />
+    </div>
     </div>
   );
 }
